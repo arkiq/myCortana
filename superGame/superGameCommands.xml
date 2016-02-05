@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-US" Name="SuperGameCommandSet_en-us">
+    <CommandPrefix>super game </CommandPrefix>
+    <Example>Begin a new game of tic tac toe</Example>
+
+    <Command Name="newGame">
+      <Example>Begin a game of tic tac toe</Example>
+      <ListenFor>begin [a] new game [of] tic tac toe</ListenFor>
+      <Feedback>Beginning a new game, please wait...</Feedback>
+      <Navigate />
+    </Command>
+
+    <Command Name="makeMove">
+      <Example>make a move</Example>
+      <ListenFor>move to square X is {xPosition} Y is {yPosition}</ListenFor>
+      <Feedback>making your move</Feedback>
+      <Navigate />
+    </Command>
+
+    <Command Name="highScorer">
+      <Example>who has the highest score</Example>
+      <ListenFor>who has the highest score</ListenFor>
+      <Feedback>Searching the best players</Feedback>
+      <VoiceCommandService Target="superGameVoiceService"/>
+    </Command>
+
+    <PhraseTopic Label="xPosition">
+    </PhraseTopic>
+    <PhraseTopic Label="yPosition">
+    </PhraseTopic>
+
+
+
+    <!--<Command Name="makeMove">
+      <Example>move to R 3 and C 5</Example>
+      <ListenFor>move [to] [square] X is {xPosition} and Y is {yPosition}</ListenFor>
+      <Feedback>Trying to make that move for you</Feedback>
+      <Navigate />
+    </Command>-->
+
+    
+
+  </CommandSet>
+
+</VoiceCommands>

@@ -1,0 +1,21 @@
+Package.Appxmanifest
+
+      <Extensions>
+        <uap:Extension Category="windows.appService"
+                       EntryPoint="superGameVoiceServiceProject.superGameVoiceService">
+          <uap:AppService Name="superGameVoiceService"/>
+        </uap:Extension>
+        <uap:Extension Category="windows.personalAssistantLaunch" />          
+      </Extensions>
+
+
+
+Commands File
+
+
+    <Command Name="highScorer">
+      <Example>who has the highest score</Example>
+      <ListenFor>who has the highest score</ListenFor>
+      <Feedback>Searching the best players</Feedback>
+      <VoiceCommandService Target="superGameVoiceService"/>
+    </Command>
